@@ -1,7 +1,7 @@
 import React from 'react';
 import {Row} from './row.js';
 import {Slot} from './slot.js';
-import './style/grid.scss';
+import './style/inventory.scss';
 
 var numOptions = 2;
 
@@ -28,7 +28,7 @@ export class Inventory extends React.Component{
         }
         
         return( 
-            <div>
+            <div className='inventory'>
             
                 {
                     slots

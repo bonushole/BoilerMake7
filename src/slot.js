@@ -1,9 +1,9 @@
 import React from 'react';
-import './style/cell.scss';
+import './style/slot.scss';
 
 export class Slot extends React.Component{
 
-    constructor(props, cells){
+    constructor(props, game){
        super(props);
     
     }
@@ -12,7 +12,7 @@ export class Slot extends React.Component{
     
     //style={{float: "left"}}
         return( 
-            <div className='cell' style={{float: "left"}}> slot </div>
+            <div className='slot' style={{float: "left"}}> slot </div>
             
         );
     
