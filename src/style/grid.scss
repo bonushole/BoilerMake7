@@ -1,11 +1,12 @@
 .grid{
 
 	display: flex;
+	position: relative;
 	justify-content: center;
-	align-items: center;
+	align-content: center;
 
-	margin-right: 15%;
-	margin-left: 15%;
+	margin-right: 50%;
+	margin-left: 50%;
 
 	height: 525px;
 	width: 525px;
