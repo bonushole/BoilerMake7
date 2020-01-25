@@ -12,7 +12,7 @@ export class Row extends React.Component{
     render() {
     
         var cells = [];
-        for(var i = 0; i < 10; i++){
+        for(var i = 0; i < this.cells.length; i++){
         
             cells.push(this.cells[i].render());
         

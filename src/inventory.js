@@ -3,50 +3,33 @@ import {Row} from './row.js';
 import {Cell} from './cell.js';
 import './style/grid.scss';
 
-var gridSize = 5;
-
 export class Grid extends React.Component{
+
+var numOptions = 2;
 
     constructor(props){
         super(props);
-        this.rows = [];
         this.cells = [];
-        for(var i = 0; i < gridSize; i++){
-        
-            var row = [];
-            
-            for(var j = 0; j < gridSize; j++){
-            
+        for(var i = 0; i < numOptions; i++){
                 var cell = new Cell();
                 this.cells.push(cell);
                 row.push(cell);
-              
-            }
+
             this.rows.push(new Row(null, row));
         
-        }
-        console.log(this.rows);
-        
+        }        
     
     }
 
     render() {
     
-        var rows = []
-        
-        
-        
-        for(var i = 0; i < this.rows.length; i++){
-        
-            rows.push(this.rows[i].render());
-        
-        }
+        var slots = [this.slots.render()];
     
         return( 
-            <div className='grid'style={{overflow:"hidden"}}>
+            <div>
             
                 {
-                    rows
+                    slots
                 }
             
             </div>
