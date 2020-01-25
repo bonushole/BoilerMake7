@@ -1,0 +1,29 @@
+/*
+
+	Font-Family:
+	Text Color:  
+	Background Color:#8ec13d;
+	
+
+*/
+
+body {
+
+	background-color: #8ec13d;
+	font-family: Helvetica, sans-serif;
+
+}
+
+
+h1 {
+
+	color: #dec13b;
+	font-family: Helvetica, sans-serif;
+	font-weight:bold;
+	text-align: center;
+	font-size: 400%;
+
+	margin-top: .5%;
+	margin-bottom: .5%;
+
+}
