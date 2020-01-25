@@ -14,14 +14,20 @@ const port = 8081;
 const server = http.createServer((req, res) => {
 	res.statusCode = 200;
 	var q = url.parse(req.url, true);	
-	if(q.pathname == "/edit"){
+	if(q.pathname == "/game"){
 
    		res.write("hello world");
 		res.end();
-		//MOVE: Moves specified clip to after the destination given
-		//Takes moveID, destinationID
+		
 	}else{
-		if(q.pathname.endsWith("png")){
+		returnFile(res, q);
+	}
+});
+
+
+function returnFile(res, q){
+
+    if(q.pathname.endsWith("png")){
 			console.log("."+q.pathname);
 			fs.readFile("."+q.pathname, function(err, data) {
 				if(err) res.end();
@@ -52,8 +58,38 @@ const server = http.createServer((req, res) => {
 				}
 			});
 		}
-	}
-});
+		
+		if(q.pathname.endsWith("html")){
+			console.log("."+q.pathname);
+			fs.readFile("."+q.pathname, function(err, data) {
+				if(err) console.log("error");
+				res.writeHead(200, {'Content-Type': 'text/html'});
+				console.log(data);
+				if(data == undefined){
+					res.end();
+				}else{
+					res.write(data);
+					res.end();
+				}
+			});
+		}
+		
+		if(q.pathname.endsWith("js")){
+			console.log("."+q.pathname);
+			fs.readFile("."+q.pathname, function(err, data) {
+				if(err) console.log("error");
+				res.writeHead(200, {'Content-Type': 'text/javascript'});
+				console.log(data);
+				if(data == undefined){
+					res.end();
+				}else{
+					res.write(data);
+					res.end();
+				}
+			});
+		}
+
+}
 
 server.listen(port, hostname, () => {
 	console.log(`Server running at http://${hostname}:${port}/`);
