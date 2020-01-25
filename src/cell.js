@@ -3,8 +3,9 @@ import './style/cell.scss';
 
 export class Cell extends React.Component{
 
-    constructor(props, cells){
+    constructor(props, game){
        super(props);
+       this.game = game;
     
     }
 

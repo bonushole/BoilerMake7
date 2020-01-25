@@ -9,8 +9,20 @@ export class Game extends React.Component{
 
     constructor(props){
         super(props);
-        this.grid = new Grid();
-        this.inventory = new Inventory();    
+        this.grid = new Grid(null,this);
+        this.inventory = new Inventory(null,this);
+        this.toggled = null; 
+    }
+
+    setToggled(slot){
+    
+        if(this.toggled!=null){
+            this.toggled.untoggle();
+        }
+        this.toggled = slot;
+        this.toggled.toggle();
+        this.forceUpdate();
+    
     }
 
     render() {

@@ -7,7 +7,7 @@ var gridSize = 5;
 
 export class Grid extends React.Component{
 
-    constructor(props){
+    constructor(props, game){
         super(props);
         this.rows = [];
         this.cells = [];
@@ -17,7 +17,7 @@ export class Grid extends React.Component{
             
             for(var j = 0; j < gridSize; j++){
             
-                var cell = new Cell();
+                var cell = new Cell(null, game);
                 this.cells.push(cell);
                 row.push(cell);
               

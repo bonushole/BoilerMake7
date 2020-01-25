@@ -7,11 +7,11 @@ var numOptions = 2;
 
 export class Inventory extends React.Component{
 
-    constructor(props){
+    constructor(props, game){
         super(props);
         this.slots = [];
         for(var i = 0; i < numOptions; i++){
-            var slot = new Slot();
+            var slot = new Slot(null, game);
             this.slots.push(slot);
         }        
     
