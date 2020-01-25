@@ -16,8 +16,7 @@ const server = http.createServer((req, res) => {
 	var q = url.parse(req.url, true);	
 	if(q.pathname == "/game"){
 
-   		res.write("hello world");
-		res.end();
+   		returnFile(res, "client/gamePage.html");
 		
 	}else{
 		returnFile(res, q);
