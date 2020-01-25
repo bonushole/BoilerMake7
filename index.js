@@ -5,6 +5,7 @@ import {render} from 'react-dom';
 //import {reducer} from './src/store';
 //import {Provider} from 'react-redux';
 import {Grid} from './src/grid.js';
+import './indexSass.scss';
 
 
 
