@@ -1,30 +1,32 @@
 import React from 'react';
 import {Row} from './row.js';
-import {Cell} from './cell.js';
+import {Slot} from './slot.js';
 import './style/grid.scss';
-
-export class Grid extends React.Component{
 
 var numOptions = 2;
 
+export class Inventory extends React.Component{
+
     constructor(props){
         super(props);
-        this.cells = [];
+        this.slots = [];
         for(var i = 0; i < numOptions; i++){
-                var cell = new Cell();
-                this.cells.push(cell);
-                row.push(cell);
-
-            this.rows.push(new Row(null, row));
-        
+            var slot = new Slot();
+            this.slots.push(slot);
         }        
     
     }
 
     render() {
     
-        var slots = [this.slots.render()];
-    
+        var slots = []
+        
+        for(var i = 0; i < this.slots.length; i++){
+        
+            slots.push(this.slots[i].render());
+        
+        }
+        
         return( 
             <div>
             

@@ -4,7 +4,8 @@ import React from 'react';
 import {render} from 'react-dom';
 //import {reducer} from './src/store';
 //import {Provider} from 'react-redux';
-import {Grid} from './src/grid.js';
+import {Game} from './src/game.js';
+import {Inventory} from './src/inventory.js';
 import './indexSass.scss';
 
 
@@ -15,8 +16,8 @@ console.log('Definitely working!');
 
 
 render(
-
-    <Grid/>,
+    <Game/>
+    ,
     
     document.getElementById('app-mount')
 

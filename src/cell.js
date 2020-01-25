@@ -12,7 +12,7 @@ export class Cell extends React.Component{
     
     //style={{float: "left"}}
         return( 
-            <div className='cell' style={{float: "left"}}> cell </div>
+            <div className='cell' style={{float: "left"}}> </div>
             
         );
     
