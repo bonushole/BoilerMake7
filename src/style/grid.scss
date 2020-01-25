@@ -1,6 +1,9 @@
 .grid{
 
-	display: inline-block;
+	position: relative;
+	display: flex;
+
+	margin: 0 auto;
 
 	height: 425px;
 	width: 425px;

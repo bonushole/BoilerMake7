@@ -1,6 +1,6 @@
 .inventory {
 
-	display: flex;
+	display: inline-block;
 	position: relative;
 
 	background-color: #24A4BC; 
@@ -8,10 +8,6 @@
 	
 	width: 425px;
 	height: 90px;
-
-	
-	margin-right: 40%;
-	margin-left: 40%;
 
 	border-style: ridge;
 	border-color: #24A4BC;
