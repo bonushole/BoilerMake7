@@ -43,7 +43,7 @@ export class Grid extends React.Component{
         }
     
         return( 
-            <div className='grid'>
+            <div className='grid'style={{overflow:"hidden"}}>
             
                 {
                     rows

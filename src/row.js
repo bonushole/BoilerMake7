@@ -19,7 +19,7 @@ export class Row extends React.Component{
         }
         //style={{overflow:"hidden"}}
         return( 
-            <div className='row'>
+            <div className='row' style={{overflow:"hidden"}}>
             
                 {
                     cells
