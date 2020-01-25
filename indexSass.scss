@@ -9,10 +9,12 @@ h1 {
 	font-family: Varela Round, serif;
 	font-weight: bold;
 	text-align: center;
-	font-size: 400%;
+	font-size: 350%;
 	
-	margin-top: .5%;
-	margin-bottom: .5%;
+	margin-top: .01%;
+	margin-bottom: .01%;
+
+	overflow: hidden;
 
 }
 
@@ -21,9 +23,15 @@ div {
 	font-family: Varela Round, serif;
 	text-align: center;
 	font-size: 100%;
+
+	overflow: hidden;
 }
 
 #words {
-	margin-top: 1%;
-	margin-bottom: 1%;
+	margin-top: .1%;
+	margin-bottom: .5%;
+	
+	font-size: 90%;
+
+	overflow: hidden;
 }
