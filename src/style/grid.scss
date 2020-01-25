@@ -1,16 +1,16 @@
 .grid{
 
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: relative;
 
-	margin-right: 15%;
-	margin-left: 15%;
+	margin-right: 35%;
+	margin-left: 35%;
 
-	height: 1000px;
-	width: 1000px;
+	height: 525px;
+	width: 525px;
 
-	
+	border-style: inset;
+	border-color: #613615;
 
 
 }
