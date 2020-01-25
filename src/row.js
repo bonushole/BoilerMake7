@@ -29,7 +29,7 @@ export class Row extends React.Component{
             
         );
         
-        return (<div className='row'> row </div>);
+        return (<div className='row' style={{overflow:"hidden"}}> row </div>);
     
     }
 }
