@@ -1,0 +1,23 @@
+{
+  "name": "boilermake7",
+  "version": "1.0.0",
+  "description": "ag sim",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bonushole/BoilerMake7.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bonushole/BoilerMake7/issues"
+  },
+  "homepage": "https://github.com/bonushole/BoilerMake7#readme",
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  }
+}
