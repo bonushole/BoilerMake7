@@ -5,13 +5,14 @@ import './style/slotSelected.scss';
 
 export class Slot extends React.Component{
 
-    constructor(props, game, type, image){
+    constructor(props, game, type, image, price){
        super(props);
        this.game = game;
        this.onClick = this.onClick.bind(this);
        this.toggled = false;
        this.type = type;
        this.image = image;
+       this.price = price;
        //this.image = require('../Icons/'+ this.type+'.png');
     
     }

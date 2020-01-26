@@ -16,7 +16,7 @@ export class Game extends React.Component{
         this.cells = this.grid.getCells();
         this.inventory = new Inventory(null,this);
         this.toggled = null;
-        this.balance = 30.0;
+        this.balance = 50.0;
         this.itemPrice = 0.0; 
     }
 
@@ -27,6 +27,7 @@ export class Game extends React.Component{
         }
         this.toggled = slot;
         this.toggled.toggle();
+        this.itemPrice = this.toggled.price;
         this.forceUpdate();
     
     }
@@ -36,9 +37,16 @@ export class Game extends React.Component{
         if(this.toggled==null){
             return;
         }
-        
-        cell.setCrop(this.toggled.type,this.toggled.image);
-        this.forceUpdate();
+        console.log(this.balance);
+        console.log(this.toggled.price);
+        if(this.balance >= this.toggled.price){
+            
+            this.balance-=this.toggled.price;
+            cell.setCrop(this.toggled.type,this.toggled.image);
+            this.forceUpdate();
+        }else{
+            console.log("too pricey apparently");
+        }
         
     
     }

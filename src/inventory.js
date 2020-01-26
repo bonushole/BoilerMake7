@@ -12,6 +12,7 @@ import soybeanImage from '../Icons/soybean.png'
 
 var options = ["corn", "cotton", "tomato", "wheat", "soybean"];
 var images = [cornImage,tomatoImage, cottonImage, wheatImage, soybeanImage];
+var prices = [10,18,20,12,15];
 
 export class Inventory extends React.Component{
 
@@ -19,7 +20,7 @@ export class Inventory extends React.Component{
         super(props);
         this.slots = [];
         for(var i = 0; i < options.length; i++){
-            var slot = new Slot(null, game, options[i], images[i]);
+            var slot = new Slot(null, game, options[i], images[i],prices[i]);
             this.slots.push(slot);
         }        
     
