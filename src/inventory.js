@@ -10,7 +10,6 @@ import tomatoImage from '../Icons/tomato.png'
 import wheatImage from '../Icons/wheat.png'
 import soybeanImage from '../Icons/soybean.png'
 
-var numOptions = 2;
 var options = ["corn", "cotton", "tomato", "wheat", "soybean"];
 var images = [cornImage, cottonImage, wheatImage, soybeanImage];
 
