@@ -6,6 +6,7 @@ import './style/grid.scss';
 import './style/itemPrice.scss';
 import './style/accountBalance.scss';
 import './style/cell.scss';
+import './style/endBar.scss';
 
 
 var gridSize = 5;
@@ -86,7 +87,7 @@ export class Game extends React.Component{
                     {grid}
                     <br/>
                     {inventory}
-                    <div className='cell' onClick={calcAndShow}></div>
+                    <div className='endBar' onClick={calcAndShow}></div>
                 </div>
                 
             );
