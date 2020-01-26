@@ -62,8 +62,8 @@ export class Game extends React.Component{
         return( 
             <div>
                 
-                <div className='itemPrice'>{balanceText}</div>
-                <div className='accountBalance'>{priceText}</div>
+                <div className='accountBalance'>{balanceText}</div>
+                <div className='itemPrice'>{priceText}</div>
                 
                 {grid}
                 <br/>
