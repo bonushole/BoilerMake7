@@ -46,7 +46,17 @@ export class Grid extends React.Component{
         
         return cropYield;
     
-    }   
+    }
+    
+    clear(){
+    
+        for(var i = 0; i < this.cells.length; i++){
+        
+            this.cells[i].clear();
+        
+        }
+    
+    }  
     
     render() {
     

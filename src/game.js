@@ -64,7 +64,16 @@ export class Game extends React.Component{
         self.balance += self.cropYield;
         self.forceUpdate();
     
-    }   
+    }
+    
+    returnToGrid(self){
+        
+        console.log("clicked");
+        self.showingBoard = true;
+        self.grid.clear();
+        self.forceUpdate();
+        
+    }
 
     render() {
     
@@ -76,6 +85,7 @@ export class Game extends React.Component{
         var self = this;
         var calcAndShow = function(){self.calculateAndShowTotals(self)};
         var endText = ">>";
+        var goBack = function(){self.returnToGrid(self)};
         
         
         if(this.showingBoard){
@@ -95,7 +105,10 @@ export class Game extends React.Component{
         }else{
         
             return(
-            <div>{this.cropYield}</div>
+            <div>
+                <div>{this.cropYield}</div>
+                <div onClick={goBack} className='endBar'>{endText}</div>
+            </div>
             );
         }
     

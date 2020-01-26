@@ -29,6 +29,13 @@ export class Cell extends React.Component{
             return yieldPrice[crops.indexOf(this.crop)];
         }
     }
+    
+    clear(){
+    
+        this.crop = null;
+        this.image = null;
+    
+    }
 
     onClick(){
         
