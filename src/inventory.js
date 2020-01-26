@@ -10,11 +10,12 @@ import tomatoImage from '../Icons/tomato.png'
 import wheatImage from '../Icons/wheat.png'
 import soybeanImage from '../Icons/soybean.png'
 import compostImage from '../Icons/compost.png'
+import tillerImage from '../Icons/tiller.png'
 
 
-var options = ["corn", "cotton", "tomato", "wheat", "soybean","compost"];
-var images = [cornImage,tomatoImage, cottonImage, wheatImage, soybeanImage,compostImage];
-var prices = [10,18,20,12,15,5];
+var options = ["corn", "cotton", "tomato", "wheat", "soybean","compost", "tiller"];
+var images = [cornImage,tomatoImage, cottonImage, wheatImage, soybeanImage,compostImage,tillerImage];
+var prices = [10,18,20,12,15,5,1];
 
 export class Inventory extends React.Component{
 

@@ -3,7 +3,7 @@ import './style/cell.scss';
 import './style/darkerCell.scss';
 
 const crops = ["corn", "cotton", "tomato", "wheat", "soybean"];
-const yieldPrice = [20,30,20,30,20];
+const yieldPrice = [11,20,25,13,18];
 
 export class Cell extends React.Component{
 
@@ -34,7 +34,12 @@ export class Cell extends React.Component{
         if(this.crop == null){
             return 0;
         }else{
-            return yieldPrice[crops.indexOf(this.crop)];
+            var basePrice = yieldPrice[crops.indexOf(this.crop)];
+            if(this.fertilized){
+                basePrice+=Math.floor(0.15 * basePrice);
+            }
+            
+            return basePrice;
         }
     }
     
@@ -42,6 +47,7 @@ export class Cell extends React.Component{
     
         this.crop = null;
         this.image = null;
+        this.fertilized = false;
     
     }
 
