@@ -7,6 +7,7 @@ import './style/itemPrice.scss';
 import './style/accountBalance.scss';
 import './style/cell.scss';
 
+
 var gridSize = 5;
 
 export class Game extends React.Component{
@@ -53,14 +54,14 @@ export class Game extends React.Component{
     
     }
     
-    calculateAndShowTotals(){
+    calculateAndShowTotals(self){
         
         console.log("clicked");
-        this.cropYield = this.grid.calcYield();
-        this.showingBoard = false;
+        self.cropYield = self.grid.calcYield();
+        self.showingBoard = false;
         
-        this.balance += this.cropYield;
-        this.forceUpdate();
+        self.balance += self.cropYield;
+        self.forceUpdate();
     
     }   
 
@@ -71,6 +72,9 @@ export class Game extends React.Component{
         
         var balanceText = "balance: " + this.balance;
         var priceText = "price: " + this.itemPrice;
+        var self = this;
+        var calcAndShow = function(){self.calculateAndShowTotals(self)};
+        
         
         if(this.showingBoard){
             return( 
@@ -82,14 +86,15 @@ export class Game extends React.Component{
                     {grid}
                     <br/>
                     {inventory}
-                    <div className='cell' onClick={this.calculateAndShowBoard}></div>
+                    <div className='cell' onClick={calcAndShow}></div>
                 </div>
                 
             );
         }else{
         
+            return(
             <div>{this.cropYield}</div>
-        
+            );
         }
     
     }
