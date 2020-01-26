@@ -3,15 +3,24 @@ import {Row} from './row.js';
 import {Slot} from './slot.js';
 import './style/inventory.scss';
 
+
+import cornImage from '../Icons/corn.png'
+import cottonImage from '../Icons/cotton.png'
+import tomatoImage from '../Icons/tomato.png'
+import wheatImage from '../Icons/wheat.png'
+import soybeanImage from '../Icons/soybean.png'
+
 var numOptions = 2;
+var options = ["corn", "cotton", "tomato", "wheat", "soybean"];
+var images = [cornImage, cottonImage, wheatImage, soybeanImage];
 
 export class Inventory extends React.Component{
 
     constructor(props, game){
         super(props);
         this.slots = [];
-        for(var i = 0; i < numOptions; i++){
-            var slot = new Slot(null, game);
+        for(var i = 0; i < options.length; i++){
+            var slot = new Slot(null, game, options[i], images[i]);
             this.slots.push(slot);
         }        
     
