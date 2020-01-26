@@ -3,16 +3,20 @@
 	color: #8ec13d;
 
 	display: inline-block;
+	position: relative;
+	overflow: hidden;
 
 	border-style: solid;
 	border-color: #7b004e;
 	background-color: #7b004e;
 
-	padding-left: 5%;
-	padding-right: 1%;
-	padding-top: 5%;
-	padding-bottom: .5%;
-	margin-top: .5%;
-	margin-left: 1%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	
+	margin-left: 2%;
+	margin-bottom: 2.5%;
+	margin-top: 2.5%;
 
 }
