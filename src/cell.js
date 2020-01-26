@@ -23,8 +23,11 @@ export class Cell extends React.Component{
     
     calcYield(){
     
-        return yieldPrice[crops.indexOf(this.crop)];
-    
+        if(this.crop == null){
+            return 0;
+        }else{
+            return yieldPrice[crops.indexOf(this.crop)];
+        }
     }
 
     onClick(){
