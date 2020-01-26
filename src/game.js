@@ -7,6 +7,9 @@ import './style/itemPrice.scss';
 import './style/accountBalance.scss';
 import './style/cell.scss';
 import './style/endBar.scss';
+import './style/sun.scss';
+
+import sun from '../Icons/sun.png'
 
 
 var gridSize = 5;
@@ -93,7 +96,7 @@ export class Game extends React.Component{
         if(this.showingBoard){
             return( 
                 <div>
-                    
+                    <div className='sun'><img style={{display:"inline-block"}} src={sun} /></div>
                     <div className='accountBalance'>{balanceText}</div>
                     <div className='itemPrice'>{priceText}</div>
                     
