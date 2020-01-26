@@ -75,6 +75,7 @@ export class Game extends React.Component{
         var priceText = "price: " + this.itemPrice;
         var self = this;
         var calcAndShow = function(){self.calculateAndShowTotals(self)};
+        var endText = ">>";
         
         
         if(this.showingBoard){
@@ -87,7 +88,7 @@ export class Game extends React.Component{
                     {grid}
                     <br/>
                     {inventory}
-                    <div className='endBar' onClick={calcAndShow}></div>
+                    <div className='endBar' onClick={calcAndShow}>{endText}</div>
                 </div>
                 
             );
