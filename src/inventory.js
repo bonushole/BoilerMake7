@@ -11,7 +11,7 @@ import wheatImage from '../Icons/wheat.png'
 import soybeanImage from '../Icons/soybean.png'
 
 var options = ["corn", "cotton", "tomato", "wheat", "soybean"];
-var images = [cornImage, cottonImage, wheatImage, soybeanImage];
+var images = [cornImage,tomatoImage, cottonImage, wheatImage, soybeanImage];
 
 export class Inventory extends React.Component{
 

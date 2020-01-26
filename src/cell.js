@@ -6,6 +6,7 @@ export class Cell extends React.Component{
     constructor(props, game){
        super(props);
        this.game = game;
+       this.crop = null;
     
     }
 

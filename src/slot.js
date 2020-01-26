@@ -44,14 +44,14 @@ export class Slot extends React.Component{
         console.log(this.image);
         if(this.toggled){
             return( 
-                <div src={this.image} className='slotSelected' onClick={this.onClick} style={{float: "left"}}> slot </div>
+                <div className='slotSelected' onClick={this.onClick} style={{textAlign:"center"},{float: "left"}}> <img style={{display:"inline-block"}} src={this.image} /> </div>
                 
             );
         }else{
          
             
             return( 
-                <div src={this.image} className='slot' onClick={this.onClick} style={{float: "left"}}> <img src={this.image} /> </div>
+                <div className='slot' onClick={this.onClick} style={{textAlign:"center"},{float: "left"}}> <img style={{display:"inline-block"}} src={this.image} /> </div>
                 
             );
         }
