@@ -3,7 +3,7 @@ import {Row} from './row.js';
 import {Slot} from './slot.js';
 import './style/inventory.scss';
 
-var numOptions = 2;
+var numOptions = 5;
 
 export class Inventory extends React.Component{
 
