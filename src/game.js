@@ -5,6 +5,7 @@ import './style/grid.scss';
 
 import './style/itemPrice.scss';
 import './style/accountBalance.scss';
+import './style/cell.scss';
 
 var gridSize = 5;
 
@@ -13,11 +14,12 @@ export class Game extends React.Component{
     constructor(props){
         super(props);
         this.grid = new Grid(null,this);
-        this.cells = this.grid.getCells();
         this.inventory = new Inventory(null,this);
         this.toggled = null;
         this.balance = 50.0;
-        this.itemPrice = 0.0; 
+        this.itemPrice = 0.0;
+        this.showingBoard = true;
+        this.cropYield = 0;
     }
 
     setToggled(slot){
@@ -50,6 +52,17 @@ export class Game extends React.Component{
         
     
     }
+    
+    calculateAndShowTotals(){
+        
+        console.log("clicked");
+        this.cropYield = this.grid.calcYield();
+        this.showingBoard = false;
+        
+        this.balance += this.cropYield;
+        this.forceUpdate();
+    
+    }   
 
     render() {
     
@@ -59,18 +72,25 @@ export class Game extends React.Component{
         var balanceText = "balance: " + this.balance;
         var priceText = "price: " + this.itemPrice;
         
-        return( 
-            <div>
+        if(this.showingBoard){
+            return( 
+                <div>
+                    
+                    <div className='accountBalance'>{balanceText}</div>
+                    <div className='itemPrice'>{priceText}</div>
+                    
+                    {grid}
+                    <br/>
+                    {inventory}
+                    <div className='cell' onClick={this.calculateAndShowBoard}></div>
+                </div>
                 
-                <div className='accountBalance'>{balanceText}</div>
-                <div className='itemPrice'>{priceText}</div>
-                
-                {grid}
-                <br/>
-                {inventory}
-            </div>
-            
-        );
+            );
+        }else{
+        
+            <div>{this.cropYield}</div>
+        
+        }
     
     }
 }

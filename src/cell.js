@@ -1,6 +1,9 @@
 import React from 'react';
 import './style/cell.scss';
 
+const crops = ["corn", "cotton", "tomato", "wheat", "soybean"];
+const yieldPrice = [20,30,20,30,20];
+
 export class Cell extends React.Component{
 
     constructor(props, game){
@@ -15,6 +18,12 @@ export class Cell extends React.Component{
     
         this.crop = crop;
         this.image = image;
+    
+    }
+    
+    calcYield(){
+    
+        return yieldPrice[crops.indexOf(this.crop)];
     
     }
 
