@@ -30,6 +30,12 @@ export class Grid extends React.Component{
     
     }
 
+    getCells(){
+    
+        return this.cells;
+    
+    }    
+    
     render() {
     
         var rows = []

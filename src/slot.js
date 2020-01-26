@@ -19,6 +19,7 @@ export class Slot extends React.Component{
     onClick(){
     
         console.log("clicked");
+        console.log(this);
         this.game.setToggled(this);
     
     }
