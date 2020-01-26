@@ -46,13 +46,15 @@ export class Game extends React.Component{
         if(this.balance >= this.toggled.price){
             
             this.balance-=this.toggled.price;
-            cell.setCrop(this.toggled.type,this.toggled.image);
+            if(this.toggled.type == "compost"){
+                cell.fertilize();
+            }else{
+                cell.setCrop(this.toggled.type,this.toggled.image);
+            }
             this.forceUpdate();
         }else{
             console.log("too pricey apparently");
         }
-        
-    
     }
     
     calculateAndShowTotals(self){

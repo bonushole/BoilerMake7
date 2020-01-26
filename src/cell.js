@@ -1,5 +1,6 @@
 import React from 'react';
 import './style/cell.scss';
+import './style/darkerCell.scss';
 
 const crops = ["corn", "cotton", "tomato", "wheat", "soybean"];
 const yieldPrice = [20,30,20,30,20];
@@ -11,6 +12,7 @@ export class Cell extends React.Component{
        this.game = game;
        this.crop = null;
        this.image = null;
+       this.fertilized = false;
     
     }
     
@@ -18,6 +20,12 @@ export class Cell extends React.Component{
     
         this.crop = crop;
         this.image = image;
+    
+    }
+    
+    fertilize(){
+    
+        this.fertilized = true;
     
     }
     
@@ -51,15 +59,25 @@ export class Cell extends React.Component{
         var cell = this;
         
         var callBack = function() {cell.onClick(cell);}
-    
+        
+        var className1 = "";
+        if(this.fertilized){
+        
+            className1 = "darkerCell";
+        
+        }else{
+        
+            className1 = "cell";
+        
+        }
+        console.log(className1);
         if(this.image == null){
             return( 
-                <div className='cell' onClick={callBack} style={{float: "left"}}> </div>
-                
+                <div className={className1} onClick={callBack} style={{float: "left"}}> </div>        
             );
         }else{
             return( 
-                <div className='cell' onClick={callBack} style={{textAlign:"center"},{float: "left"}}> <img style={{display:"inline-block"}} src={this.image} /> </div>
+                <div className={className1} onClick={callBack} style={{textAlign:"center"},{float: "left"}}> <img style={{display:"inline-block"}} src={this.image} /> </div>
                 
             );
         }

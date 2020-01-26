@@ -14,7 +14,7 @@ import compostImage from '../Icons/compost.png'
 
 var options = ["corn", "cotton", "tomato", "wheat", "soybean","compost"];
 var images = [cornImage,tomatoImage, cottonImage, wheatImage, soybeanImage,compostImage];
-var prices = [10,18,20,12,15,null];
+var prices = [10,18,20,12,15,5];
 
 export class Inventory extends React.Component{
 
