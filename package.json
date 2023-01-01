@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/bonushole/BoilerMake7#readme",
   "devDependencies": {
-    "parcel": "^1.12.4",
+    "parcel": "^2.8.2",
     "sass": "^1.25.1-test.1"
   },
   "dependencies": {
